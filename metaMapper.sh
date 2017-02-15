@@ -48,11 +48,11 @@ echo "DATABASE:$DATABASE"
 
 [ ! -f $METADATA ] & cat $METADATA | while read id attachment state ploidy
 do
-  echo "id:$id";
-  echo "path:`find $DATADIR -name \"$id.bam\" 2>error.txt`"
-  echo "attachment:$attachment"
-  echo "state:$state"
-  echo "ploidy:$ploidy"
+  # echo "id:$id";
+  # echo "path:`find $DATADIR -name \"$id.bam\" 2>error.txt`"
+  # echo "attachment:$attachment"
+  # echo "state:$state"
+  # echo "ploidy:$ploidy"
   echo "INSERT INTO $DATABASE (sample,attachment,state,ploidy) VALUES ($id,$attachment,$state,$ploidy);"
 done | mysql -u$USERNAME -p$PASSWORD;
  IFS=$OLDIFS
