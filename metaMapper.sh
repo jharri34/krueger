@@ -53,10 +53,6 @@ echo "TABLE:$TABLE"
 
 [ ! -f $METADATA ] & cat $METADATA | while read id attachment state ploidy
 do
-  # echo "id:$id";
-  # echo "attachment:$attachment"
-  # echo "state:$state"
-  # echo "ploidy:$ploidy"
   echo "INSERT INTO $TABLE (sample, attachment, state, ploidy) VALUES ($id, $attachment, $state, $ploidy);"
 done | mysql -u$USERNAME -p$PASSWORD $DATABASE;
  IFS=$OLDIFS
