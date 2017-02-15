@@ -34,6 +34,10 @@ do
     DATABASE="${i#*=}"
     shift
     ;;
+    -t=*|--table=*)
+    TABLE="${i#*=}"
+    shift
+    ;;
     --default)
     USERNAME="root"
     PASSWORD="password"
@@ -45,6 +49,7 @@ done
 echo "USERNAME:$USERNAME"
 echo "PASSWORD:$PASSWORD"
 echo "DATABASE:$DATABASE"
+echo "TABLE:$TABLE"
 
 [ ! -f $METADATA ] & cat $METADATA | while read id attachment state ploidy
 do
@@ -53,8 +58,8 @@ do
   # echo "attachment:$attachment"
   # echo "state:$state"
   # echo "ploidy:$ploidy"
-  echo "INSERT INTO $DATABASE (sample,attachment,state,ploidy) VALUES ($id,$attachment,$state,$ploidy);"
-done | mysql -u$USERNAME -p$PASSWORD;
+  echo "INSERT INTO $TABLE (sample,attachment,state,ploidy) VALUES ($id,$attachment,$state,$ploidy);"
+done | mysql -u$USERNAME -p$PASSWORD $DATABASE;
  IFS=$OLDIFS
 echo "$METADATA"
 echo "$DATADIR"
