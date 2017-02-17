@@ -48,6 +48,10 @@ do
   FILE=${file##*/}
   FILENAME=${FILE%%.*}
   EXT=${file##*.}
+  echo $FULLPATH
+  echo $FILE
+  echo $FILENAME
+  echo $EXT
 done
 result=$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NOT NULL")
 echo $result
