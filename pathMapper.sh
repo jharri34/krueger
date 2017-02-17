@@ -48,17 +48,6 @@ do
   FILE=${file##*/}
   FILENAME=${FILE%%.*}
   EXT=${file##*.}
-
-  # echo "fullpath:$FULLPATH"
-  # echo "file:$FILE"
-  # echo "filename:$FILENAME"
-  # echo "extension:$EXT"
 done
-result = $(mysql -d$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample WHERE resource IS NOT NULL")
+result = $(mysql -d$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NOT NULL")
 echo $result
-# "SELECT NOT EXISTS (SELECT * FROM $TABLE_NAME WHERE sample=$FILENAME)
-# \BEGIN ALTER $TABLE_NAME ADD "
-# "IF EXISTS (SELECT * FROM INFOMATION_SCHEMA.COLUMNS \
-# WHERE TABLE_NAME='$TABLE_NAME' AND COLUMN_NAME='$COLUMN_NAME')\
-# BEGIN\
-# ALTER TABLE $TABLE_NAME ADD $COLUMN_NAME VARCHAR(255)" | mysql -u$USERNAME -p$PASSWORD $DATABASE;
