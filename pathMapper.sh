@@ -49,5 +49,5 @@ do
   FILENAME=${FILE%%.*}
   EXT=${file##*.}
 done
-result=$(mysql -d$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NOT NULL")
+result=$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NOT NULL")
 echo $result
