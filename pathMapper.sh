@@ -42,11 +42,10 @@ do
   esac
 done
 
-# result=$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;")
-# echo $result
-$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -e "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;") | while sample; do
+# (mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;")
+while sample; do
   echo $sample
-done
+done <<(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;")
 
 for file in "$DATADIR"/*
 do
