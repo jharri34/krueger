@@ -42,6 +42,8 @@ do
   esac
 done
 
+result=$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NULL;")
+echo result
 for file in "$DATADIR"/*
 do
   FULLPATH=$file
@@ -53,5 +55,4 @@ do
   echo $FILENAME
   echo $EXT
 done
-result=$(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT profile,sample FROM $TABLE_NAME WHERE resource IS NOT NULL")
 echo $result
