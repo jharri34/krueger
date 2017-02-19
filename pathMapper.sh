@@ -44,6 +44,7 @@ done
 
 while [ sample ]
 do
+  echo $sample
   find $DATADIR -name "$sample.*" -print;
 done < <( mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;")
 
