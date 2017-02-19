@@ -42,7 +42,7 @@ do
   esac
 done
 
-while sample; do
+while [sample;] do
   find $DATADIR -name "$sample.*" -print
 done | mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"
 
