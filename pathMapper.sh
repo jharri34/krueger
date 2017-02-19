@@ -54,9 +54,8 @@ do
   FILE=${file##*/}
   FILENAME=${FILE%%.*}
   EXT=${file##*.}
-  echo $FULLPATH
-  echo $FILE
-  echo $FILENAME
-  echo $EXT
+  # echo $FULLPATH
+  # echo $FILE
+  # echo $FILENAME
+  # echo $EXT
 done
-echo $result
