@@ -44,7 +44,8 @@ done
 
 while [ sample ]
 do
-find $DATADIR -name "$sample.*"
+  FILEPATH=$(find $DATADIR -name "$sample.*")
+  echo $FILEPATH
 done | mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"
 
 for file in "$DATADIR"/*
