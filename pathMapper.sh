@@ -47,7 +47,7 @@ IFS="
 "
 SAMPLES=($(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"))
 IFS="$OIFS"
-for sample in "${SAMPLES[@]}"; do
+for SAMPLE in "${SAMPLES[@]}"; do
   echo find "$DATADIR" -name "${SAMPLE}.*"
 done
 #do
