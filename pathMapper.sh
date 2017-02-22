@@ -42,11 +42,18 @@ do
   esac
 done
 
-while [ sample ]
-do
-  FILEPATH=$(find $DATADIR -name "$sample.*")
-  echo "this is what i want t$FILEPATH"
-done | mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"
+OIFS="$IFS"
+IFS="
+"
+SAMPLES=($(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"))
+IFS="$OIFS"
+for sample in "${SAMPLES[@]}"; do
+  find "$DATADIR" -name "${SAMPLE}.*"
+done
+#do
+#  FILEPATH=$(find $DATADIR -name "$sample.*")
+#  echo "this is what i want t$FILEPATH"
+#done | mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"
 
 # for file in "$DATADIR"/*
 # do
