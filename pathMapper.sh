@@ -45,17 +45,13 @@ done
 while [ sample ]
 do
   FILEPATH=$(find $DATADIR -name "$sample.*")
-  echo "this is what i want $FILEPATH"
+  echo "this is what i want t$FILEPATH"
 done | mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"
 
-for file in "$DATADIR"/*
-do
-  FULLPATH=$file
-  FILE=${file##*/}
-  FILENAME=${FILE%%.*}
-  EXT=${file##*.}
-  # echo $FULLPATH
-  # echo $FILE
-  # echo $FILENAME
-  # echo $EXT
-done
+# for file in "$DATADIR"/*
+# do
+#   FULLPATH=$file
+#   FILE=${file##*/}
+#   FILENAME=${FILE%%.*}
+#   EXT=${file##*.}
+# done
