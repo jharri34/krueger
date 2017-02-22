@@ -48,7 +48,7 @@ IFS="
 SAMPLES=($(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"))
 IFS="$OIFS"
 for sample in "${SAMPLES[@]}"; do
-  find "$DATADIR" -name "${SAMPLE}.*"
+  echo find "$DATADIR" -name "${SAMPLE}.*"
 done
 #do
 #  FILEPATH=$(find $DATADIR -name "$sample.*")
