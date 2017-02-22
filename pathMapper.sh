@@ -42,14 +42,17 @@ do
   esac
 done
 
+
 OIFS="$IFS"
 IFS="
 "
 SAMPLES=($(mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "SELECT sample FROM $TABLE_NAME WHERE $COLUMN_NAME IS NULL;"))
 IFS="$OIFS"
+UPDATES=()
 for SAMPLE in "${SAMPLES[@]}"; do
-  find "$DATADIR" -name "${SAMPLE}.*"
+  mysql -D$DATABASE -u$USERNAME -p$PASSWORD -se "UPDATE $TABLE_NAME SET $COLUMN_NAME='$(find "$DATADIR" -name "${SAMPLE}.*")' WHERE sample='$SAMPLE' AND $COLUMN_NAME IS NULL;"
 done
+I
 #do
 #  FILEPATH=$(find $DATADIR -name "$sample.*")
 #  echo "this is what i want t$FILEPATH"
