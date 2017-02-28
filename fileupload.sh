@@ -5,7 +5,7 @@ cat <<EOT
 <!DOCTYPE html>
 <html>
 <head>
-        <title>kruger upload</title>
+        <title>Welcome to our application</title>
 </head>
 <body>
         <p>Hello! Please enter your name and e-mail address and press the submit button</p>
@@ -20,11 +20,12 @@ cat <<EOT
         </form>
 </body>
 </html>
+EOT
+
 <form action="/cgi-bin/echo.cgi" method="post" enctype="multipart/form-data">
     <label for="file">Filename:</label>
     <input type="file" name="file" id="file"><br>
     <input type="submit" name="submit" value="Submit">
 </form>
-EOT
-# POST=$(</dev/stdin)
-# echo "$POST" > /tmp/a
+POST=$(</dev/stdin)
+echo "$POST" > /tmp/a
