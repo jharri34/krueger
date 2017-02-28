@@ -51,7 +51,7 @@ echo "PASSWORD:$PASSWORD"
 echo "DATABASE:$DATABASE"
 echo "TABLE:$TABLE"
 
-[ ! -f $METADATA ] & cat $METADATA | while read id attachment state ploidy
+cat $METADATA | while read id attachment state ploidy
 do
   echo "INSERT INTO $TABLE (sample, attachment, state, ploidy) VALUES ('$id', '$attachment', '$state', '$ploidy');"
 done | mysql -u$USERNAME -p$PASSWORD $DATABASE;
