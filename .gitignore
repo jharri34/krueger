@@ -1,1 +1,5 @@
 error.txt
+*.ubam
+*.class
+*.jar
+dbconfig
