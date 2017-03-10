@@ -28,7 +28,7 @@ public class FastqToUBAM {
         String password = null;
         try {
             /* Read the dbconfig file to find connection info
-               Format:
+               The dbconfig file should be just four lines:
                server name
                database name
                user name 
