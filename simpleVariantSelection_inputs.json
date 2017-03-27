@@ -1,0 +1,9 @@
+{
+  "SimpleVariantSelection.refIndex": "./SimpleVariantSelection/ref/human_g1k_b37_20.fasta.fai",
+  "SimpleVariantSelection.name": "NA12878",
+  "SimpleVariantSelection.refDict": "./SimpleVariantSelection/ref/human_g1k_b37_20.dict",
+  "SimpleVariantSelection.haplotypeCaller.bamIndex": "./SimpleVariantSelection/inputs/NA12878_wgs_20.bai",
+  "SimpleVariantSelection.refFasta": "./SimpleVariantSelection/ref/human_g1k_b37_20.fasta",
+  "SimpleVariantSelection.gatk": "./lib/GenomeAnalysisTK.jar",
+  "SimpleVariantSelection.haplotypeCaller.inputBAM": "./SimpleVariantSelection/inputs/NA12878_wgs_20.bam"
+}

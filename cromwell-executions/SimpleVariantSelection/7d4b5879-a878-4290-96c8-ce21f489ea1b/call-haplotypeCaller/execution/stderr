@@ -1,0 +1,47 @@
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution/tmp.ADezeA
+INFO  18:25:15,206 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:25:15,211 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.7-0-gcfedb67, Compiled 2016/12/12 11:21:18 
+INFO  18:25:15,211 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  18:25:15,212 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  18:25:15,212 HelpFormatter - [Sun Mar 26 18:25:15 CDT 2017] Executing on Mac OS X 10.12.3 x86_64 
+INFO  18:25:15,212 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_121-b13 
+INFO  18:25:15,219 HelpFormatter - Program Args: -T HaplotypeCaller -R /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./SimpleVariantSelection/ref/human_g1k_b37_20.fasta -I /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./SimpleVariantSelection/inputs/NA12878_wgs_20.bam -o NA12878.raw.indels.snps.vcf 
+INFO  18:25:20,236 HelpFormatter - Executing as jamall@cisadmins-MacBook-Air.local on Mac OS X 10.12.3 x86_64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_121-b13. 
+INFO  18:25:20,237 HelpFormatter - Date/Time: 2017/03/26 18:25:15 
+INFO  18:25:20,237 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:25:20,237 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  18:25:20,267 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  18:25:20,513 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 500 
+INFO  18:25:20,524 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  18:25:20,565 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.04 
+INFO  18:25:20,582 HCMappingQualityFilter - Filtering out reads with MAPQ < 20 
+INFO  18:25:20,863 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  18:25:20,964 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  18:25:20,965 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  18:25:20,965 ProgressMeter -                 |      processed |    time |         per 1M |           |   total | remaining 
+INFO  18:25:20,967 ProgressMeter -        Location | active regions | elapsed | active regions | completed | runtime |   runtime 
+INFO  18:25:20,967 HaplotypeCaller - Disabling physical phasing, which is supported only for reference-model confidence output 
+INFO  18:25:21,052 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+WARN  18:25:21,053 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  18:25:21,054 StrandBiasTest - SAM/BAM data was found. Attempting to use read data to calculate strand bias annotations values. 
+INFO  18:25:21,142 HaplotypeCaller - Using global mismapping rate of 45 => -4.5 in log10 likelihood units 
+WARN  18:25:26,080 PairHMMLikelihoodCalculationEngine$1 - Failed to load native library for VectorLoglessPairHMM - using Java implementation of LOGLESS_CACHING 
+WARN  18:25:26,478 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not org.broadinstitute.gatk.tools.walkers.haplotypecaller.HaplotypeCaller 
+INFO  18:25:51,089 ProgressMeter -     20:10100118              0.0    30.0 s           49.8 w       16.0%     3.1 m       2.6 m 
+INFO  18:26:21,112 ProgressMeter -     20:22271266              0.0    60.0 s           99.5 w       35.3%     2.8 m     109.0 s 
+INFO  18:26:51,119 ProgressMeter -     20:62086064              0.0    90.0 s          149.1 w       98.5%    91.0 s       1.0 s 
+INFO  18:26:51,851 PairHMM - Total compute time in PairHMM computeLikelihoods() : 14.413928995000001 
+INFO  18:26:51,852 HaplotypeCaller - Ran local assembly on 279 active regions 
+INFO  18:26:51,896 ProgressMeter -            done       6.302552E7    90.0 s            1.0 s      100.0%    90.0 s       0.0 s 
+INFO  18:26:51,897 ProgressMeter - Total runtime 90.93 secs, 1.52 min, 0.03 hours 
+INFO  18:26:51,900 MicroScheduler - 7217 reads were filtered out during the traversal out of approximately 53134 total reads (13.58%) 
+INFO  18:26:51,906 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  18:26:51,907 MicroScheduler -   -> 6866 reads (12.92% of total) failing DuplicateReadFilter 
+INFO  18:26:51,907 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  18:26:51,907 MicroScheduler -   -> 351 reads (0.66% of total) failing HCMappingQualityFilter 
+INFO  18:26:51,908 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  18:26:51,908 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  18:26:51,908 MicroScheduler -   -> 0 reads (0.00% of total) failing NotPrimaryAlignmentFilter 
+INFO  18:26:51,909 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. ------------------------------------------------------------------------------------------

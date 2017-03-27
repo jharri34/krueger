@@ -1,0 +1,3 @@
+#!/bin/bash
+'/bin/bash' '/Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/a56b4bea-56ac-4cc0-a6f2-47b09a547479/call-haplotypeCaller/execution/script.submit' > /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/a56b4bea-56ac-4cc0-a6f2-47b09a547479/call-haplotypeCaller/execution/stdout 2> /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/a56b4bea-56ac-4cc0-a6f2-47b09a547479/call-haplotypeCaller/execution/stderr < /dev/null || echo -1 > /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/a56b4bea-56ac-4cc0-a6f2-47b09a547479/call-haplotypeCaller/execution/rc &
+echo $!

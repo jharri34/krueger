@@ -1,0 +1,46 @@
+loadSeq file: "/data/local/ccn_assembly/spartina/denovo30M.fastq"
+
+setParam matchSize:60	
+setParam minMatchPercent:92
+setParam matchSpacing:92
+setParam coverageType:fixed
+
+setParam mismatchPenalty:15
+setParam fixedCoverage: 1000
+setParam genomeLength: 0
+
+
+setParam matchRepeatPercent:150
+setParam maxUsableCount:25
+setParam maxGap: 50
+setParam maxAssemblyCoverage:0
+setParam matchScore:10
+
+setParam useRepeatHandling:true
+setParam gapPenalty:30
+setParam splitFalseJoins:false
+setParam falseJoinMinInconsistent:4
+setParam falseJoinMinColDepth:4
+setParam falseJoinMinFraction:25
+setParam falseJoinMinMatches:2
+setParam falseJoinUniformQual:true
+setParam falseJoinQualThresh:15
+setParam allowConstraintBased:true
+
+setQualityParam winLength:30
+setQualityParam minAveLowQual:14
+setQualityParam minAveHiQual:18
+setQualityParam minEndBaseQual:15
+setQualityParam endRegion:15
+setQualityParam nTrimWinLength:50
+setQualityParam maxN:4
+setQualityParam maxNHiQual:1
+
+setParam minContigSeqs: 2 
+assemble trimEnds: true
+RealignContigs
+saveProject file: "/data/local/ccn_assembly/spartina/spartina92_60.ace"
+format:Phrap
+saveReport file: "/data/local/ccn_assembly/spartina/spartina92_60.txt"
+writeUnassembledSeqs file: "/data/local/ccn_assembly/spartina/spartina92_60.fas"
+closeProject

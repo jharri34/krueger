@@ -1,0 +1,20 @@
+#!/bin/bash
+tmpDir=$(mktemp -d /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution/tmp.XXXXXX) 
+export _JAVA_OPTIONS=-Djava.io.tmpdir=$tmpDir
+export TMPDIR=$tmpDir
+
+(
+cd /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution
+java -jar /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./lib/GenomeAnalysisTK.jar \
+  -T HaplotypeCaller \
+  -R /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./SimpleVariantSelection/ref/human_g1k_b37_20.fasta \
+  -I /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./SimpleVariantSelection/inputs/NA12878_wgs_20.bam \
+  -o NA12878.raw.indels.snps.vcf
+)
+echo $? > /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution/rc.tmp
+(
+cd /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution
+
+)
+sync
+mv /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution/rc.tmp /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-haplotypeCaller/execution/rc

@@ -1,0 +1,9 @@
+{
+  "helloHaplotypeCaller.haplotypeCaller.RefFasta": "./helloHaplotypeCaller/ref/human_g1k_b37_20.fasta",
+  "helloHaplotypeCaller.haplotypeCaller.bamIndex": "./helloHaplotypeCaller/inputs/NA12878_wgs_20.bai",
+  "helloHaplotypeCaller.haplotypeCaller.GATK": "./lib/GenomeAnalysisTK.jar",
+  "helloHaplotypeCaller.haplotypeCaller.RefIndex": "./helloHaplotypeCaller/ref/human_g1k_b37_20.fasta.fai",
+  "helloHaplotypeCaller.haplotypeCaller.RefDict": "./helloHaplotypeCaller/ref/human_g1k_b37_20.dict",
+  "helloHaplotypeCaller.haplotypeCaller.inputBAM": "./helloHaplotypeCaller/inputs/NA12878_wgs_20.bam",
+  "helloHaplotypeCaller.haplotypeCaller.sampleName": "NA12878"
+}
