@@ -6,7 +6,7 @@ error_reporting(-1);
 $total = count($_FILES[sample][name]);
 for ($i=0; $i<$total; $i++){
   $tempfile = $_FILES['userfile']['tmp_name'][$i]
-  $fullpath = '/home/kruegerdata'.$_FILES['userfile']['name'][$i]
+  $fullpath = '/home/kruegerdata/'.$_FILES['userfile']['name'][$i]
   print_r("tempfile=".$tempfile);
   print_r("fullpath=".$fullpath);
   move_uploaded_file($tempfile,$fullpath);
