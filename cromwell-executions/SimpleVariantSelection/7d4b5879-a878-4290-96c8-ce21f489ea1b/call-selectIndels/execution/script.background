@@ -1,0 +1,3 @@
+#!/bin/bash
+'/bin/bash' '/Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-selectIndels/execution/script.submit' > /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-selectIndels/execution/stdout 2> /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-selectIndels/execution/stderr < /dev/null || echo -1 > /Users/jamall/workspace/krueger/cromwell-executions/SimpleVariantSelection/7d4b5879-a878-4290-96c8-ce21f489ea1b/call-selectIndels/execution/rc &
+echo $!

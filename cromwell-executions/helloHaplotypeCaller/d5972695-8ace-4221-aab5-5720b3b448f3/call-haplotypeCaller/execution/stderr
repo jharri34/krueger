@@ -1,0 +1,29 @@
+Picked up _JAVA_OPTIONS: -Djava.io.tmpdir=/Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/d5972695-8ace-4221-aab5-5720b3b448f3/call-haplotypeCaller/execution/tmp.xSryKP
+INFO  22:39:40,892 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  22:39:40,898 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.7-0-gcfedb67, Compiled 2016/12/12 11:21:18 
+INFO  22:39:40,899 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  22:39:40,899 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  22:39:40,899 HelpFormatter - [Sat Mar 25 22:39:40 CDT 2017] Executing on Mac OS X 10.12.3 x86_64 
+INFO  22:39:40,900 HelpFormatter - Java HotSpot(TM) 64-Bit Server VM 1.8.0_121-b13 
+INFO  22:39:40,907 HelpFormatter - Program Args: -T HaplotypeCaller -R /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/d5972695-8ace-4221-aab5-5720b3b448f3/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./sample_data/ref/human_g1k_b37_20.fasta -I /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/d5972695-8ace-4221-aab5-5720b3b448f3/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./sample_data/inputs/NA12878_wgs_20.bam -o NA12878.raw.indels.snps.vcf 
+INFO  22:39:45,934 HelpFormatter - Executing as jamall@cisadmins-MacBook-Air.local on Mac OS X 10.12.3 x86_64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_121-b13. 
+INFO  22:39:45,934 HelpFormatter - Date/Time: 2017/03/25 22:39:40 
+INFO  22:39:45,935 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  22:39:45,935 HelpFormatter - -------------------------------------------------------------------------------- 
+INFO  22:39:45,965 GenomeAnalysisEngine - Strictness is SILENT 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.7-0-gcfedb67): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions https://software.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: Fasta index file /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/d5972695-8ace-4221-aab5-5720b3b448f3/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./sample_data/ref/human_g1k_b37_20.fasta.fai for reference /Users/jamall/workspace/krueger/cromwell-executions/helloHaplotypeCaller/d5972695-8ace-4221-aab5-5720b3b448f3/call-haplotypeCaller/inputs/Users/jamall/workspace/krueger/./sample_data/ref/human_g1k_b37_20.fasta does not exist. Please see https://software.broadinstitute.org/gatk/documentation/article?id=1601 for help creating it.
+##### ERROR ------------------------------------------------------------------------------------------

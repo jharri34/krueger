@@ -2,4 +2,5 @@ error.txt
 *.ubam
 *.class
 *.jar
-dbconfig
+config.properties
+GenomeAnalysisTK.jar
