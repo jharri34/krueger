@@ -9,7 +9,7 @@ for ($i=0; $i<$total; $i++){
   $fullpath = '/home/kruegerdata'.$_FILES['userfile']['name'][$i]
   print_r("tempfile=".$tempfile);
   print_r("fullpath=".$fullpath);
-  move_uploaded_file($tempfile,$fullpath)
+  move_uploaded_file($tempfile,$fullpath);
 }
 $sample = $_POST['sample'];
 $attachment = $_POST['attachment'];
