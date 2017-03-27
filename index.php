@@ -8,8 +8,8 @@
 			Attachment:<input type="text" name="attachment" />
 			State:<input type="text" name="state" />
 			Ploidy:<input type="text" name="ploidy" />
-			 File: <input name="userfile" type="file" />
+			 File: <input name="userfile[]" type="file" multiple=""/>
     			<input type="submit" value="Send File" />
-		</form> 
+		</form>
 	 </body>
 </html>
