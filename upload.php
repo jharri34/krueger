@@ -12,6 +12,18 @@ echo '<pre>'.print_r($_FILES).'</pre>';
 //   print_r("fullpath=".$fullpath);
 //   move_uploaded_file($tempfile,$fullpath);
 // }
+foreach($_FILES['files']['name'] as $positon => $filename){
+  $tempfile = $_FILES['files']['tmp_name']['$positon'];
+  $file_size = $_FILES['files']['size']['$positon'];
+  $file_error = $_FILES['files']['error']['$positon'];
+  $location = '/home/kruegerdata/'.$_FILES['userfile']['name'];
+  if(move_uploaded_file($tempfile,$location){
+    print_r($location);
+    print_r($file_size);
+  } else {
+    print_r($file_error);
+  }
+}
 $sample = $_POST['sample'];
 $attachment = $_POST['attachment'];
 $state = $_POST['state'];
