@@ -1,0 +1,106 @@
+2017-03-29 16:12:53,515 INFO  - WorkflowActor [UUID(6b3c36cd)]: Start(Some(Actor[akka://cromwell-system/user/SingleWorkflowRunnerActor#-1391556664])) message received
+2017-03-29 16:12:53,718 INFO  - WorkflowActor [UUID(6b3c36cd)]: ExecutionStoreCreated(Start(Some(Actor[akka://cromwell-system/user/SingleWorkflowRunnerActor#-1391556664]))) message received
+2017-03-29 16:12:53,748 INFO  - WorkflowActor [UUID(6b3c36cd)]: Beginning transition from Submitted to Running.
+2017-03-29 16:12:53,753 INFO  - WorkflowActor [UUID(6b3c36cd)]: transitioning from Submitted to Running.
+2017-03-29 16:12:53,780 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of $scatter_0 to Starting.
+2017-03-29 16:12:53,828 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of $scatter_0 to Done.
+2017-03-29 16:12:53,861 INFO  - WorkflowActor [UUID(6b3c36cd)]: starting calls: jointCallingGenotypes.HaplotypeCallerERC, jointCallingGenotypes.HaplotypeCallerERC, jointCallingGenotypes.HaplotypeCallerERC
+2017-03-29 16:12:53,861 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:2 to Starting.
+2017-03-29 16:12:53,922 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:0 to Starting.
+2017-03-29 16:12:53,957 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:1 to Starting.
+2017-03-29 16:12:53,993 INFO  - WorkflowActor [UUID(6b3c36cd)]: inputs for call 'HaplotypeCallerERC:2':
+  bamFile -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12882_wgs_20.bam)
+  bamIndex -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12882_wgs_20.bai)
+  RefFasta -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta)
+  sampleName -> WdlString(NA12882)
+  GATK -> WdlSingleFile(./lib/GenomeAnalysisTK.jar)
+  RefIndex -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta.fai)
+  RefDict -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.dict)
+2017-03-29 16:12:53,999 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for HaplotypeCallerERC:2.
+2017-03-29 16:12:54,005 INFO  - WorkflowActor [UUID(6b3c36cd)]: inputs for call 'HaplotypeCallerERC:0':
+  bamFile -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12878_wgs_20.bam)
+  bamIndex -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12878_wgs_20.bai)
+  RefFasta -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta)
+  sampleName -> WdlString(NA12878)
+  GATK -> WdlSingleFile(./lib/GenomeAnalysisTK.jar)
+  RefIndex -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta.fai)
+  RefDict -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.dict)
+2017-03-29 16:12:54,007 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for HaplotypeCallerERC:0.
+2017-03-29 16:12:54,016 INFO  - WorkflowActor [UUID(6b3c36cd)]: inputs for call 'HaplotypeCallerERC:1':
+  bamFile -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12877_wgs_20.bam)
+  bamIndex -> WdlSingleFile(./jointCallingGenotypes/inputs/NA12877_wgs_20.bai)
+  RefFasta -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta)
+  sampleName -> WdlString(NA12877)
+  GATK -> WdlSingleFile(./lib/GenomeAnalysisTK.jar)
+  RefIndex -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta.fai)
+  RefDict -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.dict)
+2017-03-29 16:12:54,018 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for HaplotypeCallerERC:1.
+2017-03-29 16:12:54,060 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:1 to Running.
+2017-03-29 16:12:54,064 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:2 to Running.
+2017-03-29 16:12:54,065 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:0 to Running.
+2017-03-29 16:12:55,866 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:1]: `java -jar /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/Users/jamall/workspace/krueger/./lib/GenomeAnalysisTK.jar \
+    -T HaplotypeCaller \
+    -ERC GVCF \
+    -R /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/Users/jamall/workspace/krueger/./jointCallingGenotypes/ref/human_g1k_b37_20.fasta \
+    -I /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/Users/jamall/workspace/krueger/./jointCallingGenotypes/inputs/NA12877_wgs_20.bam \
+    -o NA12877_rawLikelihoods.g.vcf`
+2017-03-29 16:12:55,866 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:2]: `java -jar /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/Users/jamall/workspace/krueger/./lib/GenomeAnalysisTK.jar \
+    -T HaplotypeCaller \
+    -ERC GVCF \
+    -R /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/Users/jamall/workspace/krueger/./jointCallingGenotypes/ref/human_g1k_b37_20.fasta \
+    -I /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/Users/jamall/workspace/krueger/./jointCallingGenotypes/inputs/NA12882_wgs_20.bam \
+    -o NA12882_rawLikelihoods.g.vcf`
+2017-03-29 16:12:55,869 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:0]: `java -jar /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/Users/jamall/workspace/krueger/./lib/GenomeAnalysisTK.jar \
+    -T HaplotypeCaller \
+    -ERC GVCF \
+    -R /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/Users/jamall/workspace/krueger/./jointCallingGenotypes/ref/human_g1k_b37_20.fasta \
+    -I /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/Users/jamall/workspace/krueger/./jointCallingGenotypes/inputs/NA12878_wgs_20.bam \
+    -o NA12878_rawLikelihoods.g.vcf`
+2017-03-29 16:12:56,000 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:1]: command: "/bin/bash" "-c" "cat cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/script |  /bin/bash <&0"
+2017-03-29 16:12:56,000 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:2]: command: "/bin/bash" "-c" "cat cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/script |  /bin/bash <&0"
+2017-03-29 16:12:56,000 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:0]: command: "/bin/bash" "-c" "cat cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/script |  /bin/bash <&0"
+2017-03-29 16:24:15,206 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:2]: Return code: 0
+2017-03-29 16:24:15,788 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:2 to Done.
+2017-03-29 16:24:29,424 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:0]: Return code: 0
+2017-03-29 16:24:29,539 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:0 to Done.
+2017-03-29 16:24:35,223 INFO  - LocalBackend [UUID(6b3c36cd):HaplotypeCallerERC:1]: Return code: 0
+2017-03-29 16:24:35,253 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC:1 to Done.
+2017-03-29 16:24:35,304 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC to Starting.
+2017-03-29 16:24:35,344 INFO  - WorkflowActor [UUID(6b3c36cd)]: Collection complete for Scattered Call HaplotypeCallerERC.
+2017-03-29 16:24:35,410 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of HaplotypeCallerERC to Done.
+2017-03-29 16:24:35,439 INFO  - WorkflowActor [UUID(6b3c36cd)]: starting calls: jointCallingGenotypes.GenotypeGVCFs
+2017-03-29 16:24:35,446 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of GenotypeGVCFs to Starting.
+2017-03-29 16:24:35,614 INFO  - WorkflowActor [UUID(6b3c36cd)]: inputs for call 'GenotypeGVCFs':
+  RefFasta -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta)
+  sampleName -> WdlString(CEUtrio)
+  GATK -> WdlSingleFile(./lib/GenomeAnalysisTK.jar)
+  GVCFs -> ["/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/NA12878_rawLikelihoods.g.vcf", "/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/NA12877_rawLikelihoods.g.vcf", "/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/NA12882_rawLikelihoods.g.vcf"]
+  RefIndex -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.fasta.fai)
+  RefDict -> WdlSingleFile(./jointCallingGenotypes/ref/human_g1k_b37_20.dict)
+2017-03-29 16:24:35,620 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for GenotypeGVCFs.
+2017-03-29 16:24:35,639 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of GenotypeGVCFs to Running.
+2017-03-29 16:24:36,549 INFO  - LocalBackend [UUID(6b3c36cd):GenotypeGVCFs]: `java -jar /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/Users/jamall/workspace/krueger/./lib/GenomeAnalysisTK.jar \
+    -T GenotypeGVCFs \
+    -R /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/Users/jamall/workspace/krueger/./jointCallingGenotypes/ref/human_g1k_b37_20.fasta \
+    -V /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-0/NA12878_rawLikelihoods.g.vcf -V /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-1/NA12877_rawLikelihoods.g.vcf -V /Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/Users/jamall/workspace/krueger/cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-HaplotypeCallerERC/shard-2/NA12882_rawLikelihoods.g.vcf \
+    -o CEUtrio_rawVariants.vcf`
+2017-03-29 16:24:36,627 INFO  - LocalBackend [UUID(6b3c36cd):GenotypeGVCFs]: command: "/bin/bash" "-c" "cat cromwell-executions/jointCallingGenotypes/6b3c36cd-1bb9-494f-aa2a-0b0a56bf88c3/call-GenotypeGVCFs/script |  /bin/bash <&0"
+2017-03-29 16:26:31,313 INFO  - LocalBackend [UUID(6b3c36cd):GenotypeGVCFs]: Return code: 0
+2017-03-29 16:26:31,446 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of GenotypeGVCFs to Done.
+2017-03-29 16:26:31,463 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_call_logs to Starting.
+2017-03-29 16:26:31,466 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_log to Starting.
+2017-03-29 16:26:31,467 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_outputs to Starting.
+2017-03-29 16:26:31,604 INFO  - WorkflowActor [UUID(6b3c36cd)]: no inputs for call 'jointCallingGenotypes.$final_call$copy_call_logs'
+2017-03-29 16:26:31,612 INFO  - WorkflowActor [UUID(6b3c36cd)]: no inputs for call 'jointCallingGenotypes.$final_call$copy_workflow_outputs'
+2017-03-29 16:26:31,613 INFO  - WorkflowActor [UUID(6b3c36cd)]: no inputs for call 'jointCallingGenotypes.$final_call$copy_workflow_log'
+2017-03-29 16:26:32,215 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for jointCallingGenotypes.$final_call$copy_workflow_log.
+2017-03-29 16:26:32,215 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for jointCallingGenotypes.$final_call$copy_call_logs.
+2017-03-29 16:26:32,219 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_call_logs to Running.
+2017-03-29 16:26:32,220 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_log to Running.
+2017-03-29 16:26:32,230 INFO  - WorkflowActor [UUID(6b3c36cd)]: created call actor for jointCallingGenotypes.$final_call$copy_workflow_outputs.
+2017-03-29 16:26:32,232 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_outputs to Running.
+2017-03-29 16:26:32,347 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_outputs to Done.
+2017-03-29 16:26:32,348 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_call_logs to Done.
+2017-03-29 16:26:32,369 INFO  - WorkflowActor [UUID(6b3c36cd)]: persisting status of jointCallingGenotypes.$final_call$copy_workflow_log to Done.
+2017-03-29 16:26:32,387 INFO  - WorkflowActor [UUID(6b3c36cd)]: Beginning transition from Running to Succeeded.
+2017-03-29 16:26:32,415 INFO  - WorkflowActor [UUID(6b3c36cd)]: transitioning from Running to Succeeded.

@@ -1,5 +1,9 @@
 [![Stories in Ready](https://badge.waffle.io/jharri34/krueger.svg?label=ready&title=Ready)](http://waffle.io/jharri34/krueger)
-biology.cis.uab.edu
+
+biology.cis.uab.edu/krueger
+waffle.io
+github.com/jharri34/krueger
+bitbucket.com/(to come)
 https://software.broadinstitute.org/gatk/
 https://github.com/broadinstitute/wdltool/releases
 https://github.com/broadinstitute/cromwell/releases
@@ -10,3 +14,5 @@ https://sourceforge.net/projects/samtools/
 
 https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_gatk_tools_walkers_variantutils_VariantsToTable.php
 https://software.broadinstitute.org/wdl/userguide/validation
+https://software.broadinstitute.org/wdl/documentation/topic?name=wdl-tutorials
+https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_gatk_tools_walkers_variantutils_VariantsToTable.php
